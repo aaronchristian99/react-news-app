@@ -1,38 +1,223 @@
-.App {
-  text-align: center;
+/* Global Styling*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+#root {
   min-height: 100vh;
+  background-color: #141414;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header styling */
+.header-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px clamp(20px, 3vw, 80px);
+}
+
+.user-avatar-wrapper {
+  margin-left: auto;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.user-avatar-wrapper .links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+
+.user-avatar-name {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Home Page Styling */
+.home-box-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.news-container {
+  margin-top: 60px;
+}
+
+.news-card-action {
+  padding: 10px 10px 10px 0 !important;
+}
+
+.search-form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.search-form .MuiInputBase-input,
+.user-password-change-form .MuiInputBase-input,
+.filter-form .MuiInputBase-input,
+.filter-form .MuiSvgIcon-root,
+.search-form .MuiInputLabel-root,
+.user-password-change-form .MuiInputLabel-root,
+.filter-form .MuiInputLabel-root {
+  color: #fff;
+}
+
+.search-form .MuiOutlinedInput-root fieldset,
+.user-password-change-form .MuiOutlinedInput-root fieldset,
+.filter-form .MuiOutlinedInput-root fieldset,
+.search-form .MuiOutlinedInput-root:hover fieldset,
+.user-password-change-form .MuiOutlinedInput-root:hover fieldset,
+.filter-form .MuiOutlinedInput-root:hover fieldset {
+  border-color: #fff;
+}
+
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 16px;
+  margin-top: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Login and Register page Styling */
+.login-container, .register-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-box-wrapper, .register-box-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#login-submit, #register-submit {
+  margin-top: 16px !important;
+}
+
+.login-register-user {
+  margin-top: 16px;
+}
+
+#register-link {
+  margin-left: 5px;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#preference-submit {
+  margin-top: 16px;
+}
+
+/* Prefernces page styling */
+.preference-type {
+  text-transform: capitalize;
+}
+
+.checkbox-wrapper {
+  flex: 1;
+}
+
+.checkbox-wrapper .MuiCheckbox-root {
+  color: #fff;
+}
+
+.next-prev-button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+#next-button {
+  margin-left: auto;
+}
+
+#prev-button {
+  margin-right: auto;
+}
+
+.user-email-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.user-password-wrapper {
+  margin-top: 60px;
+}
+
+.user-password-change-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 16px;
+}
+
+.user-preference-select-wrapper {
+  margin-top: 60px;
+}
+
+.remove-preference {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.preferences-checkbox-wrapper {
+  height: 500px;
+  padding: 60px;
+  overflow-y: scroll;
+}
+
+#add-preference-submit, #remove-preference-submit {
+  margin: 16px 0;
+}
+
+.logout-wrapper {
+  margin: 60px 0;
+}
+
+/* Mobile responsive styling */
+@media (max-width: 500px) {
+  .user-avatar-wrapper .user-avatar-name {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-form {
+    flex-flow: column nowrap;
+  }
+
+  #search-submit {
+    margin-top: 16px;
+    width: 100%;
   }
 }
